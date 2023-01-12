@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="list.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body onload="getAllEmployee();displayDepartment()">
+<h1 style="text-align: center; color: black">List Employee</h1>
+<button class="btn btn-outline-primary" onclick="location.href='create.html'" style="margin-left: 20px">
+    Create new product</button>
+<form style="float: right;margin-right: 50px">
+    <select id="sort" onchange="sortEmployee()" class="btn btn-success">
+        <option value="all">Sort by age</option>
+        <option value="asc">Sort by age increasing</option>
+        <option value="desc">Sort by age decreasing</option>
+    </select>
+</form>
+<form style="float: right;margin-right: 50px">
+    <select id="department" onchange="departEmployee()" class="btn btn-success">
+
+    </select>
+</form>
+<div class="container">
+    <table class="table table-striped" id="list-product" style="margin-top: 30px">
+
+    </table>
+</div>
